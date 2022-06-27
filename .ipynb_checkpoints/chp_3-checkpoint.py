@@ -1,6 +1,6 @@
 ## Chp_3: Control Sequences
 
-# if ----
+# if
 if 2 + 2 == 4: #condition
     print('that was true') #outcome if true (if false, nothing happens)
 
@@ -32,7 +32,7 @@ else:
 print('one','two',sep='-',end='!') #Digression in print
 
 
-# for ----
+# in
 for i in [1,2,3]: #iterates 'variable' over sequence 'in...'
     print(i) #block applied for each assignement
 
@@ -96,54 +96,3 @@ if word[0].lower() in vowels:
 else:
     print('Not vowel-initial')
 print(letterCount)
-
-# while ----
-count = 0
-while count < 3: #while, followed by the test
-    count += 1 #statement 1
-    print(count)
-
-# while within while
-word = 'alphabet' #define word
-count = 0 #define counter
-#iterate while count is less than word length
-while count < len(word):
-    print(word[count]) #print current letter 
-    count += 1 #increment counter
-    othercount = 1 #start new counter
-    #check if 2nd counter is less than 1st
-    while othercount < count+1:
-        #print ever larger prefixes
-        print('\t',word[0:othercount])
-        othercount += 1 #increment other counter
-
-# if within while
-word = 'alphabet'
-vowels = 'aeiou'
-count = 0
-while count < len(word):
-    letter = word[count]
-    if letter not in vowels:
-        print(letter)
-    count += 1
-
-# Difference between for and while
-for i in [1,2,3]:
-    print(i)
-
-i = 1
-while i < 4:
-    print(i)
-    i += 1
-
-# Vowel counter
-vowels = 'aeiou'
-word = 'Winnepesaukee'
-counter = 0
-vowelCount = 0
-while counter < len(word):
-    if word[counter] in vowels:
-        vowelCount += 1
-    counter +=1
-print('\n', '***There are',vowelCount, 'vowels in this word.***', '\n')
-
